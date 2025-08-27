@@ -54,17 +54,17 @@ let prezzoConSconto = prezzoBiglietto;
 if (eta < 18) {
     prezzoConSconto = prezzoBiglietto - (prezzoBiglietto * 0.20)
     console.log("prezzo del biglietto con sconto minorenni (-20%)", 
-        //OUTPUT:// 
-        prezzoConSconto.toFixed(2));
+        //OUTPUT:
+        prezzoConSconto.toFixed(2) + "€");
 }
 // - se over 65 applicare sconto 40%
 else if (eta > 65) {
     prezzoConSconto = prezzoBiglietto - (prezzoBiglietto * 0.40)
-    console.log("prezzo del biglietto con sconto over 65 (-40%)", prezzoConSconto.toFixed(2));
+    console.log("prezzo del biglietto con sconto over 65 (-40%)", prezzoConSconto.toFixed(2) + "€");
 }
 
 else if (eta >=19 && eta <= 64) {
-    console.log("prezzo del biglietto senza sconto", prezzoBiglietto.toFixed(2));
+    console.log("prezzo del biglietto senza sconto", prezzoBiglietto.toFixed(2) + "€");
 }
 
 /*******************************************************************************/ 
