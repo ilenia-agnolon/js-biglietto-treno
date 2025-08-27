@@ -27,6 +27,9 @@ ________________________________________________________________________________
 
 // 1. INPUT
 // - chiedere all'utente i km da percorrere
+const km = parseInt(prompt("Quanti km vuoi percorrere?"));
+console.log("km inseriti", km);
+
 // - chiedere all'utente l'età del passeggero
 
 // 2. ELABORAZIONE
