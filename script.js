@@ -31,6 +31,8 @@ const km = parseInt(prompt("Quanti km vuoi percorrere?"));
 console.log("km inseriti", km);
 
 // - chiedere all'utente l'età del passeggero
+const eta =parseInt(prompt("Quanti anni hai?"));
+console.log("età inserita", eta);
 
 // 2. ELABORAZIONE
 // - calcolare prezzo base = km * 0.21
