@@ -63,6 +63,7 @@ else if (eta > 65) {
     console.log("prezzo del biglietto con sconto over 65 (-40%)", prezzoConSconto.toFixed(2) + "€");
 }
 
+//se invece non è minorenne o over 65
 else if (eta >=19 && eta <= 64) {
     console.log("prezzo del biglietto senza sconto", prezzoBiglietto.toFixed(2) + "€");
 }

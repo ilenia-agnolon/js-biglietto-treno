@@ -30,43 +30,55 @@ ________________________________________________________________________________
 
 // 1. INPUT
 
-// - chiedere all'utente i km da percorrere
-const km = parseInt(prompt("Quanti km vuoi percorrere?"));
-console.log("km inseriti", km);
+// • chiedere all'utente i km da percorrere e li si salva nella variabile "km"
+    const km = parseInt(prompt("Quanti km vuoi percorrere?"));
+
+    //stampare a schermo i km inseriti dall'utente
+    console.log("km inseriti", km);
 
 
-// - chiedere all'utente l'età del passeggero
-const eta =parseInt(prompt("Quanti anni hai?"));
-console.log("età inserita", eta);
+// • chiedere all'utente l'età del passeggero e la si salva nella variabile "eta"
+    const eta = parseInt(prompt("Quanti anni hai?"));
+
+    //stampare età
+    console.log("età inserita", eta);
 
 /*******************************************************************************/ 
 
 // 2. ELABORAZIONE
 
-// - calcolare prezzo base = km * 0.21
-const prezzoBiglietto = km * 0.21;
-console.log("prezzo del biglietto", prezzoBiglietto);
+/* • calcolare prezzo base = km * 0.21
+    ---> creo una variabile chiamata prezzoBiglietto a cui attribuisco il valore pari
+    alla variabile km moltiplicata per il valore fisso 0.21 */
+    const prezzoBiglietto = km * 0.21;
+
+    //stampare il prezzo (base) del biglietto
+    console.log("prezzo del biglietto", prezzoBiglietto);
 
 
-// - se minorenne applicare sconto 20%
+/* • se minorenne applicare sconto 20% , se over 65 applicare sconto 40%
+    ---> creo una variabile di scontistica a cui di default attribuisco
+        valore 0 */
+    let scontoApplicato = 0;
 
-// - se over 65 applicare sconto 40%
+    /* creo una condizione if per modificare il valore dello sconto qualora
+       incontri una delle due condizioni qui sotto */
+        if (eta < 18) {
+            scontoApplicato = 20;
+        }
+        else if (eta > 65) {
+            scontoApplicato = 40;
+        }
 
-let scontoApplicato = 0;
-
-if (eta < 18) {
-    scontoApplicato = 20;
-}
-else if (eta > 65) {
-    scontoApplicato = 40;
-}
-
-let prezzoConSconto = prezzoBiglietto - (prezzoBiglietto * scontoApplicato / 100);
+            /*creo infine la variabile di prezzo finale a cui attribuisco valore pari al
+            prezzo del biglietto iniziale meno il valore della variabile di sconto*/
+            let prezzoFinale = prezzoBiglietto - (prezzoBiglietto * scontoApplicato / 100);
 
 
 // 3. OUTPUT
 
-// - stampare in console il prezzo finale con massimo 2 decimali
+/* • stampare in console il prezzo finale con massimo 2 decimali
+    ---> stampare a schermo il riepilogo */
 console.log("prezzo base", prezzoBiglietto.toFixed(2) + "€");
 console.log("sconto applicato", scontoApplicato + "%");
-console.log("prezzo finale", prezzoConSconto.toFixed(2) + "€");
+console.log("prezzo finale", prezzoFinale.toFixed(2) + "€");
