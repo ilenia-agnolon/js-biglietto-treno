@@ -28,6 +28,9 @@ ________________________________________________________________________________
 
 /*******************************************************************************/
 
+//benvenuto
+alert("Benvenuto! Tramite questo programma calcoleremo il prezzo del biglietto per il tuo viaggio in treno! 🚅🙂");
+
 // 1. INPUT
 
 // • chiedere all'utente i km da percorrere e li si salva nella variabile "km"
@@ -41,7 +44,7 @@ ________________________________________________________________________________
     const eta = parseInt(prompt("Quanti anni hai?"));
 
     //stampare età
-    console.log("età inserita", eta);
+    console.log("età inserita", eta + " " + "anni");
 
 /*******************************************************************************/ 
 
@@ -53,7 +56,7 @@ ________________________________________________________________________________
     const prezzoBiglietto = km * 0.21;
 
     //stampare il prezzo (base) del biglietto
-    console.log("prezzo del biglietto", prezzoBiglietto);
+    console.log("prezzo base del biglietto", prezzoBiglietto + "€");
 
 
 /* • se minorenne applicare sconto 20% , se over 65 applicare sconto 40%
@@ -82,3 +85,4 @@ ________________________________________________________________________________
 console.log("prezzo base", prezzoBiglietto.toFixed(2) + "€");
 console.log("sconto applicato", scontoApplicato + "%");
 console.log("prezzo finale", prezzoFinale.toFixed(2) + "€");
+alert("Il prezzo del tuo biglietto è " + prezzoFinale + "€");
