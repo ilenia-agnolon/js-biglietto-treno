@@ -67,4 +67,5 @@ console.log("prezzo del biglietto con sconto", prezzoConSconto);
 // 3. OUTPUT
 
 // - stampare in console il prezzo finale con massimo 2 decimali
+console.log("prezzo finale: €" + prezzoConSconto.toFixed(2));
 /*******************************************************************************/
