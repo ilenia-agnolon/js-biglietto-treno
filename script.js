@@ -34,10 +34,18 @@ console.log("km inseriti", km);
 const eta =parseInt(prompt("Quanti anni hai?"));
 console.log("età inserita", eta);
 
+/**************************************/ 
+
 // 2. ELABORAZIONE
 // - calcolare prezzo base = km * 0.21
+const prezzoBiglietto = km * 0.21;
+console.log("prezzo del biglietto", prezzoBiglietto);
+
+
 // - se minorenne applicare sconto 20%
 // - se over 65 applicare sconto 40%
+
+/**************************************/ 
 
 // 3. OUTPUT
 // - stampare in console il prezzo finale con massimo 2 decimali
